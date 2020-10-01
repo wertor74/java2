@@ -10,6 +10,6 @@ public class ReverseDigits {
         return result;
     }
     public static void main(String[] args) {
-        System.out.println(reverseDigits(110));
+        System.out.println(reverseDigits(123));
     }
 }

@@ -4,11 +4,11 @@ public class AccuracyDoubleFloat {
     public static final float PI = 3.14F;
     private static double radius = 6371.2;
     public static double volumeBallDouble(double radius) {
-        double v_dbl = (4 * Astronomy.PI * radius * radius * radius) / 3;
+        double v_dbl = (4 / 3 * Astronomy.PI) * (radius * radius * radius);
         return v_dbl;
     }
     public static float volumeBallFloat(float radius) {
-        float v_flt = (4 * PI * radius * radius * radius) / 3;
+        float v_flt = (4 / 3 * PI) * (radius * radius * radius);
         return v_flt;
     }
     public static double calculateAccuracy(double radius) {

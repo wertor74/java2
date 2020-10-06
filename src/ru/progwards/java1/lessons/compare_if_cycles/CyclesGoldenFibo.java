@@ -4,7 +4,11 @@ public class CyclesGoldenFibo {
     public static boolean containsDigit(int number, int digit) {
         boolean res_cont = false;
         int count = 0;
-        for (int i = 1; 1 <= (number / i) || (number / i) == 0; i *= 10) { // узнаём разряд number, передаём его в count и проверяем первую цифру из number
+        if (number == 0) {
+            if (number == digit)
+                res_cont = true;
+        }
+        for (int i = 1; 1 <= (number / i); i *= 10) { // узнаём разряд number, передаём его в count и проверяем первую цифру из number
             count = i;
             if (number / i == digit) {
                 res_cont = true;
@@ -61,7 +65,6 @@ public class CyclesGoldenFibo {
         return res_goldtri;
     }
     public static void main(String[] args) {
-        System.out.println(containsDigit(0, 0));
         int fibo = 0;
         int fibo1 = 1;
         int fibo2 = 1;
